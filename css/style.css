@@ -103,13 +103,18 @@ button{
     height: 70px;
     display: flex;
     gap: 10px;
-    justify-content: center;
     align-items: center;
     font-size: 20px;
     border: none;
     border-radius: 10px;
     font-weight: 700;
     color: rgb(82, 82, 82);
+}
+#b-two{
+    justify-content: space-between;
+}
+#b-three{
+    justify-content: space-between;
 }
 #b-four{
     background-color: rgb(2, 197, 2);
@@ -469,4 +474,84 @@ footer p{
 .rights p{
     padding: 100px 0;
     text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    *{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .logo img{
+        width: 60px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    .cover{
+        height: 100vh;
+    }
+    .btn{
+        flex-direction: column;
+    }
+    .btn button{
+        padding-left: 30px;
+        width: 300px;
+    }
+    .tour{
+        flex-direction: column;
+    }
+    .tour-list, .tour-place{
+        margin-top: 3%;
+        width: 100%;
+    }
+    .box-contain{
+        flex-direction: column;
+    }
+    .box{
+        width: 400px;
+    }
+    .time-and-date{
+        flex-wrap: wrap;
+    }
+    .discounts-img-one{
+        justify-content: center;
+        align-items: end;
+    }
+    .discounts-img-two{
+        height: 100vh;
+        justify-content: center;
+        align-items: end;
+    }
+    .discount-element{
+        width: 300px;
+        margin: 0;
+        padding: 20px;
+        transform: translatey(-35px);
+    }
+    .discount-element-two{
+        width: 300px;
+        margin: 0;
+        padding: 20px;
+        transform: translatey(-35px);
+    }
+    .place{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .place-video{
+        margin-top: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .get-update{
+        flex-direction: column;
+    }
+    .input-form{
+       display: flex;
+       justify-content: start;
+    }
 }
