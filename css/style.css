@@ -339,7 +339,10 @@ main{
     display: flex;
     justify-content: center;
 }
-
+#b-four{
+    display: flex;
+    justify-content: center;
+}
 /*--------------end of deals and discount part--------------*/
 
 .place{
@@ -479,7 +482,16 @@ footer p{
 @media screen and (max-width:600px) {
     *{
         max-width: 600px;
-        margin: 0 auto;
+    }
+    h2{
+        font-size: 1.5rem!important;
+        padding: 5px 0!important;
+    }
+    #b-four{
+    justify-content: center;
+    width: 150px;
+    height: 55px;
+    font-size: 17px;
     }
     nav{
         flex-direction: column;
@@ -507,14 +519,23 @@ footer p{
         margin-top: 3%;
         width: 100%;
     }
+    .row-one{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .row-two{
+       grid-template-columns: repeat(1, 1fr);
+    }
+    .row-two img{
+        width: 500px;
+    }
+    .row-three{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .box-contain{
         flex-direction: column;
     }
     .box{
         width: 400px;
-    }
-    .time-and-date{
-        flex-wrap: wrap;
     }
     .discounts-img-one{
         justify-content: center;
@@ -528,14 +549,34 @@ footer p{
     .discount-element{
         width: 300px;
         margin: 0;
-        padding: 20px;
+        padding: 10px 30px;
         transform: translatey(-35px);
     }
     .discount-element-two{
         width: 300px;
         margin: 0;
-        padding: 20px;
+        padding: 20px 50px;
         transform: translatey(-35px);
+    }
+    .location-title h1{
+        font-size: 1.5rem!important;
+    }
+    .time-and-date{
+        line-height: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: nowrap;
+        font-size: 1rem!important;
+        gap: 0;
+    }
+    .time p{
+        font-size: 1rem!important;
+    }
+    .time span{
+        font-size: 30px;
+    }
+    .location-title p{
+        font-size: 1rem!important;
     }
     .place{
         flex-direction: column;
@@ -553,5 +594,8 @@ footer p{
     .input-form{
        display: flex;
        justify-content: start;
+    }
+    #b-five{
+        justify-content: center;
     }
 }
