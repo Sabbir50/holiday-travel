@@ -19,8 +19,9 @@
                 <h1>Holiday <span>Travel</span></h1>
             </div>
             <ul class="sidebar">
-                <li><a href="#"><h1><img src="Images/travel.png" alt="">
-                Holiday <span>Travel</span></h1></a></li>
+                <div class="cross">
+                    <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                </div>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Packages</a></li>
                 <li><a href="#">Testimonial</a></li>
@@ -28,14 +29,14 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li onclick="showSidebar" class="menu">
-                    <a href="">
-                        <img class="menu-icon" src="icons/menu_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <li class="hidemobile"><a href="#">Home</a></li>
+                <li class="hidemobile"><a href="#">Packages</a></li>
+                <li class="hidemobile"><a href="#">Testimonial</a></li>
+                <li class="hidemobile"><a href="#">Blog</a></li>
+                <li class="hidemobile"><a href="#">Contact</a></li>
+                <li onclick="showSidebar()" class="menu">
+                       <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                     </a>
             </li>
             </ul>
@@ -368,6 +369,10 @@
         function showSidebar(){
           const sidebar = document.querySelector('.sidebar')
           sidebar .style .display = 'flex'
+        }
+        function hidesidebar(){
+            const sidebar = document.querySelector('.sidebar')
+          sidebar .style .display = 'none'
         }
     </script>
 </body>
