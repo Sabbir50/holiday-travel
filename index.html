@@ -18,12 +18,26 @@
                 <img src="Images/travel.png" alt="">
                 <h1>Holiday <span>Travel</span></h1>
             </div>
+            <ul class="sidebar">
+                <li><a href="#"><h1><img src="Images/travel.png" alt="">
+                Holiday <span>Travel</span></h1></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Testimonial</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Packages</a></li>
                 <li><a href="#">Testimonial</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
+                <li onclick="showSidebar" class="menu">
+                    <a href="">
+                        <img class="menu-icon" src="icons/menu_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </a>
+            </li>
             </ul>
         </nav>
 
@@ -142,7 +156,6 @@
             <p>Here's why choosing our travel agency will make your travel dreams a reality, stress-free</p>
             </div>
             <div class="box-container">
-                <div class="box-contain">
                     <div class="box" id="box-1">
                         <img src="Images/hotel.png" alt="">
                         <h1>Handpicked Hotels</h1>
@@ -154,7 +167,7 @@
                         <p>Our dedicated staff goes above and beyond to ensure your comfort and cater to your individual needs. From remembering your preferences to anticipating your requests, we create a personalized experience that feels like home, away from home.
                         </p>
                     </div>
-                </div>
+                </span>
                 <div class="box" id="box-3">
                     <img src="Images/1169918.png" alt="">
                     <h1>Best Price Guarantee</h1>
@@ -294,11 +307,37 @@
             <div class="copun">
                 <img src="Images/Rectangle 8 (1).png" alt="">
                 <div class="discount-copun">
-                    <p>HolidayTravel.com</p>
-                    <h1>70% off</h1>
+                    <div class="copun-tag">
+                        <p>HolidayTravel.com</p>
+                        <h1>70% off</h1>
+                    </div>
                 </div>
             </div>
         </section>
+        <div class="benefit        ">
+            <div class="benifits-title">
+                <h1>Benefits for Holiday <span class="span">Travelers</span> </h1>
+                <p>Exclusive perks await! Embark on an unforgettable.</p>
+                <p>holiday journey and enjoy benefits designed just for you</p>
+            </div>
+            <div class="benefit-box">
+                <div class="b-box">
+                    <img src="icons/receipt_long_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <h1>Paper Works</h1>
+                    <p> Stress-free applications! We help complete your paperwork with ease.</p>
+                </div>
+                <div class="b-box">
+                    <img src="icons/id_card_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <h1>License Verified</h1>
+                    <p>Confidence guaranteed! We assist with license verification for qualified professionals.</p>
+                </div>
+                <div class="b-box">
+                    <img src="icons/model_training_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <h1>Tour training</h1>
+                    <p>Now included: Tour training for every customer to ensure a confident and informed adventure!</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -321,6 +360,16 @@
             <p>2024, All Rights Reserved by Holiday Travel.</p>
         </div>
     </footer>
+
+
+
+
+    <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar .style .display = 'flex'
+        }
+    </script>
 </body>
 </html>
 

@@ -1,5 +1,7 @@
 *{
     font-family: "Mulish", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 img{
     width: 100%;
@@ -9,7 +11,7 @@ p{
     color: rgb(81, 81, 81);
 }
 header{
-    margin: 0 8%;
+    margin: 2% 8%;
 }
 nav{
     display: flex;
@@ -40,7 +42,75 @@ nav ul{
     display: flex;
     gap: 30px;
 }
+
+
+
+
+
+.menu-icon{
+    width: 50px;
+}
+li h1{
+    font-size: 1.5rem;
+}
+li h1 span{
+    color: rgb(0, 231, 0);
+}
+li h1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+li h1 img{
+    width: 40px;
+}
+.sidebar{
+    padding-left: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: -10px 0 10px rgb(0,0,0.0, 1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sidebar li a{
+    transition: 0.3s;
+}
+.sidebar li{
+    width: 100%;
+    border: none;
+    padding: 5px 6px;
+    transition: 0.3s;
+}
+.sidebar li:hover{
+    border: none;
+    background: rgb(0, 185, 0);
+    padding: 5px 6px;
+}
+.sidebar li:hover a{
+    color: white;
+}
+.sidebar li a{
+    width: 100%;
+}
+
+
+.menu{
+    padding: 0;
+}
+.menu:hover{
+    border:none;
+    padding: 0;
+}
+
 nav ul li{
+    display: flex;
+    align-items: center;
     list-style: none;
     padding-bottom: 7px;
     transition: 0.3s;
@@ -57,7 +127,7 @@ nav ul li:hover{
 
 /*-------cover-image-------*/
 .cover{
-    margin: 0 auto;
+    margin: 5% auto;
     width: 100%;
     height: 80vh;
     background:linear-gradient(rgba(15, 15, 15, 0.315), rgba(0, 0, 0, 0.466)), url(../Images/Group\ 13\ \(1\)\ \(1\).png);
@@ -99,6 +169,7 @@ nav ul li:hover{
     border-radius: 10px;
 }
 button{
+    padding: 0 10px;
     width: 200px;
     height: 70px;
     display: flex;
@@ -214,29 +285,23 @@ main{
     text-align: center;
 }
 .box-container{
+    margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.box-contain{
-    margin-top: 3%;
-    display: flex;
-    justify-content: space-between;
     gap: 30px;
+   
 }
-.box{width: 50%;
-    border-radius: 30px;
-    padding: 50px;
-}
-.box h1{
-    font-size: 2rem;
-    font-weight: 900;
-}
-.box p{
-    font-size: 20px;
+.box{
+    width: 40%;
+    padding: 30px;
+    border-radius: 20px;
 }
 .box img{
-    width: 10%;
+    width: 50px;
+}
+.box h1{
+    padding: 20px 0;
 }
 #box-1{
     border: 1px solid rgb(252, 221, 135);
@@ -247,7 +312,6 @@ main{
     background: rgb(195, 237, 247);
 }
 #box-3{
-    margin-top: 30px;
     border: 1px solid rgb(170, 250, 180);
     background: rgb(235, 255, 230);
 }
@@ -376,8 +440,9 @@ iframe{
 .get-update{
     margin-top: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 30px;
 }
 .input-form{
     display: flex;
@@ -420,14 +485,13 @@ iframe{
     margin: 0 5% 10% 0;
     position: absolute;
     background: rgb(2, 211, 2);
-    padding: 20px 50px;
+    padding: 30px 50px;
     transform: rotate(-30deg);
     line-height: 0;
     border-radius: 10px;
 }
-
 .discount-copun h1{
-    
+    padding-top: 30px;
     color: white;
     font-weight: 700;
     font-size: 2rem;
@@ -468,6 +532,31 @@ footer p{
 .icon img{
     width: 35px;
 }
+.b-box img{
+    width: 50px;
+}
+.span{
+    color: rgb(0, 231, 0);
+}
+.benifits-title p{
+    margin: 0 0;
+}
+.benefit{
+    margin-top: 5%;
+}
+.benefit-box{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.b-box{
+    border: rgb(0, 231, 0) 1px solid;
+    padding: 30px 50px;
+    border-radius: 20px;
+    background: rgb(249, 255, 247);
+}
+
 .footer{
     padding-top: 100px;
     margin: 0 8%;
@@ -480,8 +569,8 @@ footer p{
 }
 
 @media screen and (max-width:600px) {
-    *{
-        max-width: 600px;
+    *{  
+        margin: 0 0;
     }
     h2{
         font-size: 1.5rem!important;
@@ -492,9 +581,6 @@ footer p{
     width: 150px;
     height: 55px;
     font-size: 17px;
-    }
-    nav{
-        flex-direction: column;
     }
     .logo img{
         width: 60px;
@@ -521,21 +607,29 @@ footer p{
     }
     .row-one{
         grid-template-columns: repeat(1,1fr);
+        height: auto;
+    }
+    .row-one img{
+        height: auto;
     }
     .row-two{
+        width: 100%;
+        height: auto;
        grid-template-columns: repeat(1, 1fr);
     }
     .row-two img{
-        width: 500px;
+        width: 100%;
+        height: auto;
     }
     .row-three{
         grid-template-columns: repeat(1, 1fr);
+
     }
-    .box-contain{
-        flex-direction: column;
-    }
+
+/****END GELLARY**********/
+
     .box{
-        width: 400px;
+        width:100 ;
     }
     .discounts-img-one{
         justify-content: center;
@@ -597,5 +691,40 @@ footer p{
     }
     #b-five{
         justify-content: center;
+    }
+    .input-form{
+        line-height: 1;
+    }
+    .input-form > button{
+        width: 100%!important;
+    }
+    .copun{
+        width: 100%;
+    }
+    .copun img{
+        margin-top: 5%;
+        width: 100%;
+    }
+    .discount-copun{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 50px;
+    }
+    .discount-copun h1{
+        font-size: 1.5rem;
+    }
+    .discount-copun p{
+        font-size: 1rem;
+        
+    }
+    .copun-tag{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;   
+    }
+    .benefit-box{
+        flex-direction: column;
     }
 }
